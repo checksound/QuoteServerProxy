@@ -10,7 +10,7 @@ public class TestQuoteClient {
         int port = Integer.parseInt(args[1]);
 
         System.out.println("Starting client to '" + hostname + "' linstning on port: " + port);
-        QuoteClient qClient = new QuoteClient(hostname, port);
+        QuoteUDPClient qClient = new QuoteUDPClient(hostname, port);
 
         qClient.doRequest(10_000);
     }

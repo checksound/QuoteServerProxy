@@ -6,12 +6,12 @@ import java.net.*;
  *
  * @author www.codejava.net
  */
-public class QuoteClient {
+public class QuoteUDPClient {
     private final int port;
     private final DatagramSocket socket;
     private final InetAddress address;
 
-    public QuoteClient(String hostname, int port) throws UnknownHostException, SocketException {
+    public QuoteUDPClient(String hostname, int port) throws UnknownHostException, SocketException {
         address = InetAddress.getByName(hostname);
         this.port = port;
         socket = new DatagramSocket();

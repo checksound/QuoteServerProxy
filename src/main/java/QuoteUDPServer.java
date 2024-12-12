@@ -8,12 +8,12 @@ import java.util.*;
  *
  * @author www.codejava.net
  */
-public class QuoteServer {
+public class QuoteUDPServer {
     private DatagramSocket socket;
     private List<String> listQuotes = new ArrayList<String>();
     private Random random;
  
-    public QuoteServer(int port) throws SocketException {
+    public QuoteUDPServer(int port) throws SocketException {
         socket = new DatagramSocket(port);
         random = new Random();
     }
@@ -28,7 +28,7 @@ public class QuoteServer {
         int port = Integer.parseInt(args[1]);
  
         try {
-            QuoteServer server = new QuoteServer(port);
+            QuoteUDPServer server = new QuoteUDPServer(port);
             server.loadQuotesFromFile(quoteFile);
             server.service();
         } catch (SocketException ex) {
